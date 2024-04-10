@@ -13,12 +13,12 @@ else {
          body: JSON.stringify({
           "username": username,
           "password": password
+         })
       })
-   })
    .then(response => response.json())
    .then(data => console.log(data))
    .catch((error) => {
       consol%error('Errore:', error);
-   });
+      });
 }
 
