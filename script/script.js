@@ -15,10 +15,10 @@ else {
           "password": password
          })
       })
-   .then(response => response.json())
-   .then(data => console.log(data))
-   .catch((error) => {
-      consol%error('Errore:', error);
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch((error) => {
+         consol%error('Errore:', error);
       });
 }
 
