@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Numeri positivi e Negativi</title>
+</head>
+<body>
+<h2><p align="center">Gestione numeri positivi e negativi all'interno di un vettore</p></h2>
+    <label>Inserisci il numero: </label>
+    <input type="number" id="numero">
+    <br><br>
+    <button onclick="inserisciNumero()">Aggiungi il numero nel vettore</button>
+    <p id="vettore"></p>
+    <button onclick="contaPositiviNegativi()">Conta positivi e negativi</button>
+    <p id="risultati"></p>
+
+    <script>
+        var vettore = [];
+
+        function inserisciNumero()  {
+            var numero = document.getElementById("numero").value;
+            vettore.push(parseint(numero));
+            document.getElementById("vettore").textContent = "Il Vettore contiene: " + vettore;
+            document.getElementById("numero").value = "";
+        }
+
+        function contaPositivinegativi() {
+            var positivi = 0;
+            var negativi = 0;
+            for (var i = 0; i < vettore.lenght; i++) {
+                if (vettore[i] > 0) {
+                    positivi++;
+                } else if (vettore[i] < 0) {
+                    negativi++;
+                }
+            }
+            document.getElementById("risultati").textContent = "Positivi: " + positivi + ", Negativi: " + negativi;
+        }
+    </script>
+</body>
+</html>
